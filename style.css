@@ -1,0 +1,235 @@
+@charset "utf-8";
+body {
+	background-color: #ccc;
+	margin: 0px;
+}
+.wrapper {
+	width: 100%;
+	height: 500px;
+	background-color: #ccc;
+	margin: 0;
+}
+
+.wrapper .topLine {
+	width: 100%;
+	height: 85px;
+	float: left;
+	clear: both;
+	background-color: #2b2b2b;
+}
+.wrapper .topLine #logo {
+	width: 399px;
+	height: 85px;
+	margin-left: 40px;
+}
+
+.wrapper .menuLine {
+	width: 100%;
+	height: 40px;
+	clear: both;
+	background-color: #242424;
+	border-bottom: solid #333 10px;
+}
+.navigation {
+	background-color: #666666;
+	clear: both;
+	height: 20px;
+	width: 100%;
+	padding-top: 1px;
+	padding-bottom: 2px;
+}
+.wrapper .navigation a {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: #F9F9F9;
+	text-decoration: none;
+}
+
+.wrapper .navigation a:hover {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: #CE0100;
+	background-color: #F4F4F4;
+}
+.table_layout {
+	background-color: #2B2B2B;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: #CC0000;
+	padding: 5px;
+	margin-left: 40px; float: left;
+}
+.table_layout a {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: #CCCCCC;
+	text-decoration: none;
+}
+
+.table_layout a:hover {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: #CCCCCC;
+	text-decoration: underline;
+}
+
+
+.menu {
+	width: 600px;
+	height: 22px;
+	float: left;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 17px;
+	color: #F7F7F7;
+	font-style: normal;
+	margin-left: 40px;
+	padding-top: 9px;
+}
+
+.menulogin {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 17px;
+	color: #F7F7F7;
+	text-decoration: none;
+	float: left;
+	padding-top: 9px;
+}
+
+.menu a {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 17px;
+	color: #F7F7F7;
+	text-decoration: none;
+}
+.menu a:hover {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 17px;
+	color: #CF0001;
+	background-color: #F8F8F8;
+
+}
+
+#username {
+	background-image: url(images/username.jpg);
+	width: 97px;
+	height: 40px;
+	float: left;
+}
+
+#password {
+	background-image: url(images/password.jpg);
+	width: 97px;
+	height: 40px;
+	float: left;
+}
+
+#login {
+	width: 60px;
+	height: 40px;
+	float: left;
+}
+
+#logout {
+	width: 76px;
+	height: 40px;
+	float: left;
+}
+
+
+.input {
+	width: 97px;
+	height: 40px;
+	float: left;
+	margin-top: 9px;
+}
+
+
+.wrapper .content {
+	background-color: #FFFFFF;
+	height: auto;
+	width: 100%;
+	clear: both;
+	border-bottom: solid #c00 5px;
+	overflow: auto;
+
+}
+.tableMenu {
+	width: 200px;
+	float: left;
+	margin-left: 5px;
+	margin-right: 5px;
+	vertical-align: middle;
+}
+
+.tableEdit {
+	margin-left: 35px;
+}
+
+.wrapper .content #contentLeft {
+	background-color: #333;
+	width: 500px;
+	height: 220px;
+	margin-left: 40px;
+	margin-top: 15px;
+	float: left;
+	position: relative;
+}
+.wrapper .content #contentRight {
+	float: right;
+	width: 500px;
+	height: 220px;
+	margin-top: 15px;
+	background-color: #333;
+	margin-right: 50px;
+	position: relative;
+}
+
+
+
+
+.wrapper .news {
+	background-color: #333;
+	width: 100%;
+	height: 250px;
+}
+.wrapper .footer {
+	background-color: #ccc;
+	width: 100%;
+	height: 40px;
+}
+
+td.outputfield {
+	font-family: "Times New Roman", Times, serif;
+	font-size: 12px;
+	padding: 3px;
+	background-color: #f0f0f0;
+	height: 24px;
+}
+
+td.outputfieldRight {
+	font-family: "Times New Roman", Times, serif;
+	font-size: 12px;
+	padding: 3px;
+	background-color: #f0f0f0;
+	height: 24px;
+	text-align: right;
+}
+
+td.outputfieldLeft {
+	font-family: "Times New Roman", Times, serif;
+	font-size: 12px;
+	padding: 3px;
+	background-color: #f0f0f0;
+	height: 24px;
+	text-align: left;
+}
+
+input {
+	font-family: "Times New Roman", Times, serif;
+	font-size: 14px;
+	}
+	
+select {
+	font-family: "Times New Roman", Times, serif;
+	font-size: 12px;
+	}
