@@ -9,19 +9,14 @@ $imageNumber = $_GET['image'];		//broj proizvoda iz URL
 
 $selectImageString = sprintf("SELECT %s FROM photo WHERE product=%s", $imageNumber, $productId);
 
-//echo $selectImageString;
-
 $selectImageQuery = mysql_query($selectImageString);
-
-//echo $selectImageQuery;
 
 $selectImageResult = mysql_fetch_array($selectImageQuery);
 
-//echo $selectImageResult;
-
-
 // after connecting to and reading the row from the table 
 $image = $selectImageResult[0];
+
+//dodati kod za citanje tipa slike. takodje modifikovati bazu da podrzava vise tipova slika
 header("Content-type: image/png"); // or whatever 
 echo $image; 
 exit; 
