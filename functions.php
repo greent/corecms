@@ -86,7 +86,7 @@ function formCreate($input, $tableName, $tableDisplay, $id, $action, $user_id){	
 
 */
 	
-	$queryString = sprintf("select * from %s where id=%s", $tableName, $id);		//formira string za odabir svih polja iz unete promenljive $tableName
+	$queryString = sprintf("SELECT * FROM %s WHERE id=%s", $tableName, $id);		//formira string za odabir svih polja iz unete promenljive $tableName
 	
 	$query = mysql_query($queryString);							//izvrsavanje upita
 		
@@ -98,7 +98,7 @@ function formCreate($input, $tableName, $tableDisplay, $id, $action, $user_id){	
 	
 		echo "<tr>\n";
 		
-		$type=$input[$cnt]['type'];						//alias promenljive za tip
+		$type = $input[$cnt]['type'];						//alias promenljive za tip
 		
 		$name = $input[$cnt]['name'];					//alias za ime
 		
@@ -110,8 +110,8 @@ function formCreate($input, $tableName, $tableDisplay, $id, $action, $user_id){	
 			
 			case "hidden":		//ako je tip hidden onda se vrednost ne ispisuje u obliku polja u tabeli
 				
-				if($action=='add'){
-					echo $type;
+				if($action=='add'){		//ako je akcija dodavanje
+					
 					printf("<input type=\"%s\" name=\"%s\">\n", $input[$cnt]['type'], $input[$cnt]['name']); //ispis u slucaju hiddena
 				} else {
 					printf("<input type=\"%s\" name=\"%s\" value=\"%s\" \>\n", $input[$cnt]['type'], $input[$cnt]['name'], $input[$cnt]['value']); //ispis u slucaju hiddena
@@ -123,7 +123,7 @@ function formCreate($input, $tableName, $tableDisplay, $id, $action, $user_id){	
 				
 				$fieldName=$input[$cnt]['name'];		//ime select forme
 				
-				$profile_name = $global_type . "_profile";
+				$profile_name = $global_type . "_profile";		//promenljiva koja ce proveravati da li se neka tabela zove <name>_profile
 				
 				if($fieldName == $global_type && $global_type != 'user'){
 				
