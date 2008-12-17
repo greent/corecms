@@ -4,7 +4,7 @@ require_once('functions.php');
 
 connect();
 
-$table_list_s = sprintf("select distinct group_name from table_names");
+$table_list_s = sprintf("SELECT DISTINCT group_name FROM table_names");
 
 $table_list_q = mysql_query($table_list_s);
 
@@ -20,7 +20,7 @@ while($table_list_res=mysql_fetch_array($table_list_q)){
 
 	for($group_id=0; $group_id<$num_group; $group_id++){
 	
-		$group_sel_s = sprintf("select * from table_names where group_name = '%s' order by display_order", $group_name[$group_id]);
+		$group_sel_s = sprintf("SELECT * FROM table_names WHERE group_name = '%s' ORDER BY display_order", $group_name[$group_id]);
 			
 			printf("<div class=\"tableMenu\">\n");
 			echo "<table class=\"table_layout\" border=0 align=center>\n";
