@@ -1,6 +1,6 @@
 <div id="login">
 <form action="login-script.php" method="post">
-<table class="table_layout" style="margin-left: 40px; float: left;" width="350">
+<table class="table_layout">
 <tr><td colspan="2">Login</td></tr>
 <tr><td><a>Login:</a></td><td><input type="text" name="username"></input></td></tr>
 <tr><td><a>Password:</a></td><td><input type="password" name="password"></input></td></tr>

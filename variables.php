@@ -16,6 +16,9 @@ include_once('translation_rs.php');
 
 define("REVISION", 11);
 
+define("TA_ROWS", 4);		//defines text area rows
+define("TA_COLS", 30);		//defines text area columns
+
 define("IMAGE_NUM", 3);		//broj slika za proizvod, takodje i broj niza polja u photo tabeli sa imenom image1, image2, ... imageN
 
 define("T_TXT",'text');

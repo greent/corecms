@@ -26,6 +26,7 @@ $transl = array(
 'image1' =>			'image1',
 'image2' =>			'image2',
 'image3' =>			'image3',
+'image_exist' =>	'image already exists. if you intend to use this slot, please delete it first',
 );
 
 ?>

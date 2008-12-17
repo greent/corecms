@@ -1,12 +1,6 @@
 <?php
 	
-	require_once('variables.php');
-	
-	function defs(){
-		$textarea_rows = 4;			//broj redova u textarea poljima
-		$textarea_cols = 30;		//broj kolona u textarea poljim
-	}
-	
+	require('variables.php');
 	
 	///////////////////  podaci za konekciju. pre testiranja nakon postavljanja na host racunar promeniti donje podatke
 	
@@ -55,6 +49,10 @@
 //////////////////////////// dole se nalazi funkcija koja kreira formu za editovanje jednog polja u bazi ///////////////////////////////
 
 function formCreate($input, $tableName, $tableDisplay, $id, $action, $user_id){	//pocetak funkcije koja pravi formu
+	
+	require('translation_rs.php');		//includes (requires) translation array
+	
+	
 	
 	$textarea_rows = 4;			//broj redova u textarea poljima
 	$textarea_cols = 30;		//broj kolona u textarea poljima
@@ -181,7 +179,7 @@ function formCreate($input, $tableName, $tableDisplay, $id, $action, $user_id){	
 			case "textarea":	//slucaj ako je tip = textarea
 				if($action=='add'){
 					printf("<td class=\"outputfieldLeft\"width=%s%%>%s</td>\n", $width, $input[$cnt]['display']);
-					printf("<td class=\"outputfieldRight\"><textarea name=\"%s\" rows=%u cols=%u></textarea></td>\n", $name, $textarea_rows, $textarea_cols);	//ispis inputa sa vrednoscu iz tabele
+					printf("<td class=\"outputfieldRight\"><textarea name=\"%s\" rows=%u cols=%u></textarea></td>\n", $name, TA_ROWS, TA_COLS);	//ispis inputa sa vrednoscu iz tabele
 				} elseif($action=='delete'){
 					printf("<td width=%s%%>%s</td>\n", $width, $input[$cnt]['display']);
 					
@@ -204,16 +202,22 @@ function formCreate($input, $tableName, $tableDisplay, $id, $action, $user_id){	
 				}
 			break;
 			
-			//slucaj ako je tip == file, odnosno, file handling rutina za ispis
-			//dovrsiti
+			//image handler below
 			
-			case "image":	
+			case "image":
+
+				
 				if($action=='add'){
 					printf("<td class=\"outputfieldRight\" width=%s%%>%s</td>\n", $width, $display);
+					if(!empty($result[$name])){
+						printf("<td width=%s class=\"outputfieldLeft\">empty</td>", "");
+					} else {
+						printf("<td width=%s class=\"outputfieldLeft\">%s</td>", "", $transl['image_exist']);
+					}
 				}
 			break;
 			
-			// kraj rutine za ispis fajla
+			// image handler end
 			
 			
 			

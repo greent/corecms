@@ -16,7 +16,7 @@ $num = count($function);
 
 //echo $selectString;
 
-printf("<TABLE CLASS=\"tableEdit\">\n");
+printf("<table class=\"tableEdit\">\n");
 
 while($result = mysql_fetch_assoc($queryAllFromTable)){
 	printf("<tr height=\"16\">\n");
@@ -66,7 +66,7 @@ while($result = mysql_fetch_assoc($queryAllFromTable)){
 
 
 }
-	printf("<TR><TD align=\"center\" colspan=\"%s\">",$num);
+	printf("<tr><td align=\"center\" colspan=\"%s\">",$num);
 	
 	if($global_type == 'user'){	
 		printf("<a href=\"form.php?table=%s&id=%s&action=add\"><img src=\"images/add01-mid.png\"  border=0></a>\n", $table, $global_user_id);
