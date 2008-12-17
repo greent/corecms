@@ -50,7 +50,7 @@
 
 function formCreate($input, $tableName, $tableDisplay, $id, $action, $user_id){	//pocetak funkcije koja pravi formu
 	
-	require('translation_rs.php');		//includes (requires) translation array
+	require('translation.php');		//includes (requires) translation array
 	
 	
 	

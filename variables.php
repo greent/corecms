@@ -1,34 +1,19 @@
 <?php
 
-/////////////////////// funkcije koje definisu promenljivu matricu
-	/////////////////////// nazivi (name polje) su zapravo isti nazivi polja kao u tabeli baze
-	
-	//tipovi su  (text, textarea, option) i datetime ukoliko je u pitanju datetime tip polja u tabeli baze
-	//ukoliko je tip promenljive hidden, koristiti definisane vrednosti zbog funkcija koje rade obradu podataka
-	//rezervisana imena za hidden vrednosti su za sada
-	//id
-	//tableName
-	//ostale vrednosti treba zapravo treba definisati programski sta ce da cine u slucaju da postoje.
-	//
+// variables definition array(s)
+// array key 'name' is actually same as field name in mysql database
+// array key 'type' is type, defined in defines.php file. behavior and new types can be added through change of functions.php file and adding appropriate code for it
+// array value for key 'type' hidden is special control type and is parsed through html form type 'hidden'. currently available values for hidden values are
+// id
+// tableName
+// those values actually does not need definition below as they are processed internaly as id key and tableName identifiers
+// in case of option type (T_OPT), key with name opt_display is required as it fetches foreign key table value with field name assigned to this variable.
+
+include_once('translation.php');		//includes file for translating display terms
+
+include_once('defines.php');			//includes defines for type key
 
 
-include_once('translation_rs.php');
-
-
-
-define("REVISION", 11);
-
-define("TA_ROWS", 4);		//defines text area rows
-define("TA_COLS", 30);		//defines text area columns
-
-define("IMAGE_NUM", 3);		//broj slika za proizvod, takodje i broj niza polja u photo tabeli sa imenom image1, image2, ... imageN
-
-define("T_TXT",'text');
-define("T_OPT", 'option');
-define("T_DT", 'datetime');
-define("T_TA", 'textarea');
-define("T_IMG", 'image');
-	
 $fl_language = array(
 	'type' => T_TXT,
 	'name' => 'fl_language',
